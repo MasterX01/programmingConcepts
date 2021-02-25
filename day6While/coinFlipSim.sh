@@ -18,7 +18,7 @@ do
        fi
 done
 
-if(( $head -eq 1 ))
+if(( $head -eq 11 ))
 then
        echo "Head wins 11 times"
 else
