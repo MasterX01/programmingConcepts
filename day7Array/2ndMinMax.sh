@@ -3,7 +3,7 @@
 # generate 3 digit random number
 function generateRandomNumber() {
 
-randomNumber=$((RANDOM%1000))
+randomNumber=`shuf -i 100-999 -n 1`
 
 echo $randomNumber
 
