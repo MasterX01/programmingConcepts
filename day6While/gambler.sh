@@ -11,7 +11,7 @@ betTimes=0
 betWin=0
 betLoss=0
 
-while [ (( $gambler_money -gt 0 )) && (( $gambler_money -lt 200 )) && (( $bet >
+while [ (( $gambler_money -gt 0 )) && (( $gambler_money -le 200 )) && (( $bet -eq 1 )) ]
 do
        coinFlip=$((RANDOM%2))
        if(( 4coinFlip -eq 0 ))
@@ -24,5 +24,4 @@ do
        (( betTimes++ ))
 done
 
-echo "$betWin wins the game"
-echo "$betTimes total bets made"
+echo "Wins: $betWin, Money: $gambler_money, Bet Times: $betTimes, Loss: $betLoss"
